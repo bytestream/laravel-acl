@@ -5,7 +5,7 @@ use Kodeine\Acl\Models\Eloquent\Role;
 use Kodeine\Acl\Models\Eloquent\User;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
-class RoleTest extends ModelsTest
+class RoleTest extends ModelsTestCase
 {
     /* ------------------------------------------------------------------------------------------------
      |  Properties

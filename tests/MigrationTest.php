@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Schema;
 
-class MigrationsTest extends TestCase
+class MigrationTest extends TestCase
 {
     /* ------------------------------------------------------------------------------------------------
      |  Test Functions

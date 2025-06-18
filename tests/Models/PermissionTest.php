@@ -4,7 +4,7 @@ use Kodeine\Acl\Models\Eloquent\Permission;
 use Kodeine\Acl\Models\Eloquent\Role;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
-class PermissionTest extends ModelsTest
+class PermissionTest extends ModelsTestCase
 {
     /* ------------------------------------------------------------------------------------------------
      |  Properties

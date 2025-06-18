@@ -2,7 +2,7 @@
 
 use Kodeine\Acl\Tests\TestCase;
 
-abstract class ModelsTest extends TestCase
+abstract class ModelsTestCase extends TestCase
 {
     /* ------------------------------------------------------------------------------------------------
      |  Main Functions
