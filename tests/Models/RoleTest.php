@@ -36,8 +36,7 @@ class RoleTest extends ModelsTestCase
      |  Test Functions
      | ------------------------------------------------------------------------------------------------
      */
-    /** @test */
-    public function itCanBeInstantiated()
+    public function testItCanBeInstantiated()
     {
         $expectations = [
             \Illuminate\Database\Eloquent\Model::class,
@@ -49,8 +48,7 @@ class RoleTest extends ModelsTestCase
         }
     }
 
-    /** @test */
-    public function itHasRelationships()
+    public function testItHasRelationships()
     {
         $usersRelationship       = $this->roleModel->users();
         $permissionsRelationship = $this->roleModel->permissions();
@@ -68,9 +66,8 @@ class RoleTest extends ModelsTestCase
         $this->assertInstanceOf(User::class, $user);
         $this->assertInstanceOf(Permission::class, $permission);
     }
-    
-    /** @test */
-    public function itCanCreate()
+
+    public function testItCanCreate()
     {
         $attributes = [
             'name'        => 'Custom role',
@@ -86,9 +83,8 @@ class RoleTest extends ModelsTestCase
     
         $this->assertDatabaseHas('roles', $attributes);
     }
-    
-    /** @test */
-    public function itCanUpdate()
+
+    public function testItCanUpdate()
     {
         $attributes = $this->getAdminRoleAttributes();
     
@@ -108,9 +104,8 @@ class RoleTest extends ModelsTestCase
         $this->assertDatabaseHas('roles', $updatedAttributes);
         $this->assertDatabaseHas('roles', $role->toArray());
     }
-    
-    /** @test */
-    public function itCanDelete()
+
+    public function testItCanDelete()
     {
         $role = $this->createRole();
     

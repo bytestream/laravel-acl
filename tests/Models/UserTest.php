@@ -36,8 +36,7 @@ class UserTest extends ModelsTestCase
      |  Test Functions
      | ------------------------------------------------------------------------------------------------
      */
-    /** @test */
-    public function itCanBeInstantiated()
+    public function testItCanBeInstantiated()
     {
         $expectations = [
             \Illuminate\Database\Eloquent\Model::class,
@@ -49,8 +48,7 @@ class UserTest extends ModelsTestCase
         }
     }
 
-    /** @test */
-    public function itCanAttachRole()
+    public function testItCanAttachRole()
     {
         $objRole = new Role();
         $role = $objRole->create([
@@ -70,8 +68,7 @@ class UserTest extends ModelsTestCase
         $this->assertEquals($user->getRoles(), [ 1 => $this->str_slug('Admin role', config('laravel-auth.slug-separator'))]);
     }
 
-    /** @test */
-    public function itCanAttachRoleAndPermission()
+    public function testItCanAttachRoleAndPermission()
     {
         $objRole = new Role();
         $roleAttributes = [
@@ -107,8 +104,7 @@ class UserTest extends ModelsTestCase
         $this->assertEquals($user->getPermissions(), ['post' => $permissionAttributes['slug']]);
     }
 
-    /** @test */
-    public function cacheTest()
+    public function testCache()
     {
         $objRole = new Role();
         $roleAttributes = [

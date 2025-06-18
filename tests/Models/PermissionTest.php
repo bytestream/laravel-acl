@@ -37,8 +37,7 @@ class PermissionTest extends ModelsTestCase
      |  Test Functions
      | ------------------------------------------------------------------------------------------------
      */
-    /** @test */
-    public function itCanBeInstantiated()
+    public function testItCanBeInstantiated()
     {
         $expectations = [
             \Illuminate\Database\Eloquent\Model::class,
@@ -50,8 +49,7 @@ class PermissionTest extends ModelsTestCase
         }
     }
 
-    /** @test */
-    public function itHasRelationships()
+    public function testItHasRelationships()
     {
         $rolesRelationship = $this->permissionModel->roles();
 
@@ -63,8 +61,7 @@ class PermissionTest extends ModelsTestCase
         );
     }
 
-    /** @test */
-    public function itCanCreate()
+    public function testItCanCreate()
     {
         $attributes = [
             'name'        => 'Create users',
@@ -84,8 +81,7 @@ class PermissionTest extends ModelsTestCase
         ]);
     }
 
-    /** @test */
-    public function itCanUpdate()
+    public function testItCanUpdate()
     {
         $attributes = [
             'name'        => 'Create users',
@@ -114,8 +110,7 @@ class PermissionTest extends ModelsTestCase
         $this->assertDatabaseMissing('permissions', $attributes);
     }
 
-    /** @test */
-    public function itCanDelete()
+    public function testItCanDelete()
     {
         $attributes = [
             'name'        => 'Create users',

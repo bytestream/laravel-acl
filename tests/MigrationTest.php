@@ -9,8 +9,7 @@ class MigrationTest extends TestCase
      | ------------------------------------------------------------------------------------------------
      */
 
-    /** @test */
-    public function itCanMigrate()
+    public function testItCanMigrate()
     {
         $this->migrate();
 
